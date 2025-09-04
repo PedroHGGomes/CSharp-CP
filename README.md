@@ -42,39 +42,42 @@ Todas as requisições API retornam status HTTP apropriados:
 
 Método	Endpoint	Descrição
 
-GET	/api/AbrigoApi	Lista todos os abrigos
+GET	/api/brinquedos	Lista todos os abrigos
 
-GET	/api/AbrigoApi/{id}	Busca abrigo por ID
+GET	/api/brinquedos/{id}	Busca abrigo por ID
 
-GET	/api/AbrigoApi/search?nome={nome}	Busca abrigo por nome
+GET	/api/brinquedos/search?nome={nome}	Busca abrigo por nome
 
-POST	/api/AbrigoApi	Cadastra um novo abrigo
+POST	/api/brinquedos	Cadastra um novo abrigo
 
-PUT	/api/AbrigoApi/{id}	Atualiza um abrigo existente
+PUT	/api/brinquedos/{id}	Atualiza um abrigo existente
 
-DELETE	/api/AbrigoApi/{id}	Remove um abrigo
+DELETE	/api/brinquedos/{id}	Remove um abrigo
 
 <h2>Exemplo de Requisição</h2>
 
-POST /api/AbrigoApi<br>
+POST /api/brinquedos<br>
 Content-Type: application/json<br>
 
 {<br>
-  "nome": "Abrigo Central",<br>
-  "endereco": "Rua das Flores, 123",<br>
-  "capacidade": 200,<br>
-  "ocupacao_Atual": 150<br>
+  "idBrinquedo": 4,
+  "nomeBrinquedo": "Tabuleiro Aventura (Edição 2)",
+  "tipoBrinquedo": "Jogo de Tabuleiro",
+  "classificacao": "+8",
+  "tamanho": "Grande",
+  "preco": 149.90
 }<br>
 
 Resposta esperada:<br>
 
 201 Created<br>
 {
-  "id_ABRIGO": 1,<br>
-  "nome": "Abrigo Central",<br>
-  "endereco": "Rua das Flores, 123",<br>
-  "capacidade": 200,<br>
-  "ocupacao_Atual": 150<br>
+  "idBrinquedo": 4,
+  "nomeBrinquedo": "Tabuleiro Aventura (Edição 2)",
+  "tipoBrinquedo": "Jogo de Tabuleiro",
+  "classificacao": "+8",
+  "tamanho": "Grande",
+  "preco": 149.90
 }<br>
 
 
@@ -83,66 +86,45 @@ Resposta esperada:<br>
 
 - API REST que atenda a boas práticas de programação / arquitetura;
  
-![image](https://github.com/user-attachments/assets/4db88b9a-a157-4a62-bbe1-dbc5520a4c52)
+<img width="516" height="208" alt="image" src="https://github.com/user-attachments/assets/085ea3c4-06ea-478f-a043-b1bd5d14c30c" />
 
 
 - Apresentar um CRUD pelo menos (GET (mais de 3 rotas e devidamente parametrizadas com QueryParams ou 
 PathParams), POST, PUT, DELETE)<br>
 GET:
 
-![image](https://github.com/user-attachments/assets/5ac622da-5857-4d01-8a1b-d6252f57abb1)
+<img width="1182" height="926" alt="image" src="https://github.com/user-attachments/assets/3f240c23-49f0-4212-9154-361866bbf8d2" />
+
 
 
 POST:
 
-![image](https://github.com/user-attachments/assets/f0636cfc-88e8-4db6-b741-9cda33619930)
+<img width="1152" height="926" alt="image" src="https://github.com/user-attachments/assets/d144b4b3-9305-47e6-9c8e-deacf19b02d8" />
 
-
-PUT:
-
-![image](https://github.com/user-attachments/assets/f3b14c9d-74a3-41eb-9d18-4129d0fe0b64)
-
-![image](https://github.com/user-attachments/assets/13d8ce65-06e0-49a8-8698-c52ee5491bec)
 
 
 DELETE:
 
-![image](https://github.com/user-attachments/assets/a35d57f0-7287-4891-ba97-cc1087f172f5)
-
-
-
-
-- Apresentar os retornos HTTP adequados para cada rota (ok, NotFound, BadRequest, NoContent, Created)
-OK:
-
-![image](https://github.com/user-attachments/assets/d9443e5e-c7ef-496b-9f56-bf48c988d4ff)
-
-
-NotFound/BadRequest/No Content:
-
-![image](https://github.com/user-attachments/assets/a7cd36b7-49e6-4f3e-8901-cb3c39a99137)
-
-Created:
-
-![image](https://github.com/user-attachments/assets/47ddbb92-2619-4bc1-a201-bf9958879e22)
-
+<img width="1093" height="638" alt="image" src="https://github.com/user-attachments/assets/70661d0c-ef7f-4dcc-9bb6-235e0971f6df" />
 
 
  
 - Integração do Banco de dados Oracle via EF Core, com utilização de migrations para criação das tabelas
  Alteração feita no .json:
  
-![image](https://github.com/user-attachments/assets/650e5c4b-69c5-420e-9eb9-35db1420e1a0)
+<img width="719" height="65" alt="image" src="https://github.com/user-attachments/assets/b62ff92f-dadb-45ed-af8d-1a5712b68212" />
 
 
 Criação nos modelos:
 
-![image](https://github.com/user-attachments/assets/521cc096-e2d0-47f3-aa6d-19ef9e496799)
+<img width="419" height="537" alt="image" src="https://github.com/user-attachments/assets/150573b3-68ec-4542-9ccc-b180837b3b1c" />
+
 
 
 Conexão com Oracle no program.cs:
 
-![image](https://github.com/user-attachments/assets/73c6c941-14f4-42bd-9519-a19ed8ab6ace)
+<img width="473" height="47" alt="image" src="https://github.com/user-attachments/assets/2ea705ef-8a28-4aa1-b785-b25f2ea7e5c9" />
+
 
 
 
@@ -151,16 +133,18 @@ Conexão com Oracle no program.cs:
 
 Swagger Brinquedos:
 
+<img width="1904" height="660" alt="image" src="https://github.com/user-attachments/assets/876d233c-7bdc-4ec2-b128-16976a6b184d" />
 
 
 
 
 Schemas:
 
-![image](https://github.com/user-attachments/assets/42b93970-ac0b-4e5c-8afe-93c10ccb5f3b)
-![image](https://github.com/user-attachments/assets/b0c031e4-83a0-4f36-b0b3-64f848e043a5)
+<img width="1116" height="274" alt="image" src="https://github.com/user-attachments/assets/df297352-4dc8-4a53-b745-f9f3ced46ff8" />
+
 
 Configuração para um banco de dados relacional:
 
-![image](https://github.com/user-attachments/assets/e947d00b-c839-4f92-ab27-2550e60108c5)
+<img width="1059" height="345" alt="image" src="https://github.com/user-attachments/assets/96d9ab50-6de1-430b-ba3a-2d54dcc6520e" />
+
 
