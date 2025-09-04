@@ -41,7 +41,6 @@ public class BrinquedosController(AppDbContext context) : ControllerBase
         var exists = await _context.Brinquedos.AnyAsync(b => b.IdBrinquedo == id);
         if (!exists) return NotFound();
 
-        _context.Entry(brinquedo).State = EntityState.Modified;
         await _context.SaveChangesAsync();
         return NoContent();
     }
