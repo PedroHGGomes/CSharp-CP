@@ -16,13 +16,13 @@ namespace WebApp.Migrations
                 name: "TDS_TB_BRINQUEDOS",
                 columns: table => new
                 {
-                    ID_BRINQUEDO = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    NOME_BRINQUEDO = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    TIPO_BRINQUEDO = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
-                    CLASSIFICACAO = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    TAMANHO = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    PRECO = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false)
+                    ID_BRINQUEDO = table.Column<int>(type: "NUMBER(10)", nullable: false)
+                        .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
+                    NOME_BRINQUEDO = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: false),
+                    TIPO_BRINQUEDO = table.Column<string>(type: "NVARCHAR2(60)", maxLength: 60, nullable: false),
+                    CLASSIFICACAO = table.Column<string>(type: "NVARCHAR2(30)", maxLength: 30, nullable: false),
+                    TAMANHO = table.Column<string>(type: "NVARCHAR2(30)", maxLength: 30, nullable: false),
+                    PRECO = table.Column<decimal>(type: "DECIMAL(10,2)", precision: 10, scale: 2, nullable: false)
                 },
                 constraints: table =>
                 {

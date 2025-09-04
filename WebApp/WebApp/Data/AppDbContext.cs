@@ -11,7 +11,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     {
         base.OnModelCreating(modelBuilder);
 
-        // Seed opcional (aparece na primeira criação do banco via migrations)
+        
         modelBuilder.Entity<Brinquedo>().HasData(
             new Brinquedo { IdBrinquedo = 1, NomeBrinquedo = "Carrinho", TipoBrinquedo = "Veículo", Classificacao = "Livre", Tamanho = "Pequeno", Preco = 29.90m },
             new Brinquedo { IdBrinquedo = 2, NomeBrinquedo = "Boneca", TipoBrinquedo = "Boneca", Classificacao = "Livre", Tamanho = "Médio", Preco = 59.90m },
