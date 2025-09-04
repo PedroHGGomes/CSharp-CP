@@ -9,7 +9,8 @@ builder.Services.AddSwaggerGen();
 
 // EF Core + SQL Server
 var cs = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(cs));
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseOracle(cs));
+
 
 var app = builder.Build();
 

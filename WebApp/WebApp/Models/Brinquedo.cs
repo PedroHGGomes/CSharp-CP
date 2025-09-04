@@ -32,3 +32,4 @@ public class Brinquedo
     [Range(0, 9999999999.99)]
     public decimal Preco { get; set; }
 }
+
